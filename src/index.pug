@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        title savage worlds adventure edition character assistant
+        link(rel="stylesheet" href="styles.css")
+
+    body
+
+        section#app
+
+            header#totals
+                .attributes(v-bind:class="{ overmax: attributesOver }")
+                    span.total {{attributesTotal}}
+                    span.label Attributes
+                .skills(v-bind:class="{ overmax: skillsOver }")
+                    span.label Skills
+                    span.total {{skillsTotal}}
+
+            article#main
+                div.trait(v-for="trait, tName in traits")
+                    div.attribute
+                        div.block
+                            span.item.value {{dice[trait.value]}}
+                            span.item.name {{tName}}
+                            a.item.dn(@click="decrease(tName)") -
+                                //- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
+                            a.item.up(@click="increase(tName)") +
+                                //- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+
+                    div.skills
+                        div.skill(v-for="skill, sName in trait.skills")
+                            div.block
+                                span.item.value {{dice[skill.value]}}
+                                span.item.name {{sName}}
+                                a.item.dn(@click="decrease(tName, sName)") -
+                                    //- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
+                                a.item.up(@click="increase(tName, sName)") +
+                                    //- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        script(src="data.js")
+        script(src="main.js")

@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 8px;
+}
+
+body {
+  font: 2rem/4rem sans-serif;
+  background: #b0bec5;
+  color: #212121;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  background: #546e7a;
+  color: #eceff1;
+}
+header .skills {
+  justify-content: flex-end;
+}
+header div {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+header div .label {
+  font-weight: normal;
+}
+header div .total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #607d8b;
+  width: 5rem;
+  height: 5rem;
+}
+header .skills .total {
+  margin-left: 2rem;
+}
+header .attributes .total {
+  margin-right: 2rem;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 12rem 1rem 0;
+}
+#main .trait {
+  flex: 1;
+  margin: 0 1rem 6rem;
+}
+#main .trait .attribute {
+  font-weight: bold;
+}
+#main .trait .skill {
+  font-size: 1.75rem;
+}
+#main .trait .block {
+  display: flex;
+  background: #f5f5f5;
+  margin-bottom: 1rem;
+  min-height: 5rem;
+}
+#main .trait .block .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+#main .trait .block span.name {
+  justify-content: flex-start;
+  flex: 1;
+  background: #eeeeee;
+  padding: 0 2rem;
+}
+#main .trait .block span.value {
+  min-width: 10rem;
+}
+#main .trait .block a.item {
+  font-size: 3rem;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 5rem;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+#main .trait .block a.item.dn {
+  background: #cfd8dc;
+  color: #546e7a;
+}
+#main .trait .block a.item.up {
+  background: #BBDEFB;
+  color: #1E88E5;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../src/styles.sass%22,%22../src/material.sass%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AASA;EACI;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA,YC+QsB;ED9QtB,OCuQuB;;;ADrQ3B;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA,YCwQsB;EDvQtB,OCiQsB;;AD/PtB;EACI;;AAEJ;EACI;EACA;EACA;;AAEA;EACI;;AAEJ;EACI;EACA;EACA;EACA,YCqPc;EDpPd,OA5CH;EA6CG,QA7CH;;AA+CL;EACI;;AAEJ;EACI;;;AAER;EACI;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAEA;EACI;;AAEJ;EACI;;AAEJ;EACI;EACA,YCuMe;EDtMf;EACA,YAzEH;;AA2EG;EACI;EACA;EACA;EACA;;AAEJ;EACI;EACA;EACA,YC2LW;ED1LX;;AAEJ;EACI;;AAEJ;EACI;EACA;EACA;EACA;EACA,WA/FP;EAgGO;EACA;EACA;;AAEA;EACI,YCuLM;EDtLN,OC2LM;;ADvLV;EACI,YCzBO;ED0BP,OCrBO%22,%22file%22:%22styles.css%22%7D */

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>savage worlds adventure edition character assistant</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section id="app">
+      <header id="totals">
+        <div class="attributes" v-bind:class="{ overmax: attributesOver }"><span class="total">{{attributesTotal}}</span><span class="label">Attributes</span></div>
+        <div class="skills" v-bind:class="{ overmax: skillsOver }"><span class="label">Skills</span><span class="total">{{skillsTotal}}</span></div>
+      </header>
+      <article id="main">
+        <div class="trait" v-for="trait, tName in traits">
+          <div class="attribute">
+            <div class="block"><span class="item value">{{dice[trait.value]}}</span><span class="item name">{{tName}}</span><a class="item dn" @click="decrease(tName)">-</a><a class="item up" @click="increase(tName)">+</a></div>
+          </div>
+          <div class="skills">
+            <div class="skill" v-for="skill, sName in trait.skills">
+              <div class="block"><span class="item value">{{dice[skill.value]}}</span><span class="item name">{{sName}}</span><a class="item dn" @click="decrease(tName, sName)">-</a><a class="item up" @click="increase(tName, sName)">+</a></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

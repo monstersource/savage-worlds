@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "browser-sync": "browser-sync start --server docs --watch --files docs --no-notify --no-open --no-online --no-ui --no-ghost-mode",
+        "pug": "pug --watch src --out docs --pretty",
+        "sass": "sass --watch src/:docs/ --embed-source-map",
+        "tsc": "tsc --watch src/*.ts --outDir docs --alwaysStrict --preserveWatchOutput",
+        "watch": "run-p browser-sync pug sass tsc"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.4.10",
+        "postcss": "^7.0.14"
+    }
+}

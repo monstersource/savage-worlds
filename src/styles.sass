@@ -1,0 +1,181 @@
+@import material
+
+$bg: $grey0
+$fg: $grey9
+
+$button: 5rem
+
+$accent: $teal5
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+html
+    font-size: 8px
+
+body
+    font: 2rem/4rem sans-serif
+    background: $bluegrey2
+    color: $fg
+
+header
+    display: flex
+    justify-content: space-between
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    font-weight: bold
+    background: $bluegrey6
+    color: $bluegrey0
+
+    .skills
+        justify-content: flex-end
+
+    div
+        display: flex
+        align-items: center
+        flex: 1
+
+        .label
+            font-weight: normal
+
+        .total
+            display: flex
+            align-items: center
+            justify-content: center
+            background: $bluegrey5
+            width: $button
+            height: $button
+
+    .skills .total
+        margin-left: 2rem
+
+    .attributes .total
+        margin-right: 2rem
+
+#main
+    display: flex
+    flex: 1
+    flex-wrap: wrap
+    margin: ($button + 1rem) * 2 1rem 0
+
+    .trait
+        flex: 1
+        margin: 0 1rem $button + 1rem
+
+        .attribute
+            font-weight: bold
+
+        .skill
+            font-size: 1.75rem
+
+        .block
+            display: flex
+            background: $grey1
+            margin-bottom: 1rem
+            min-height: $button
+
+            .item
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 0 1rem
+
+            span.name
+                justify-content: flex-start
+                flex: 1
+                background: $grey2
+                padding: 0 2rem
+
+            span.value
+                min-width: $button * 2
+
+            a.item
+                font-size: 3rem
+                padding: 0
+                font-weight: bold
+                cursor: pointer
+                min-width: $button
+                user-select: none
+                -moz-user-select: none
+                -webkit-user-select: none
+
+                &.dn
+                    background: $bluegrey1
+                    color: $bluegrey6
+                    // svg
+                    //     fill: $bluegrey6
+
+                &.up
+                    background: $blue1
+                    color: $blue6
+                    // svg
+                    //     fill: $blue6
+
+// article#main
+//     display: flex
+//     flex-wrap: wrap
+//     padding: 0 1rem
+//     margin-top: ($button + 1rem) * 2
+//
+//     .trait
+//         flex: 1
+//         margin-bottom: $button + 1rem
+//
+//     .attribute
+//         font-size: 16px
+//         font-weight: bold
+//
+//     .skill
+//         font-size: 14px
+//
+//     .block
+//         display: flex
+//         justify-content: space-between
+//         margin-bottom: 1rem
+//
+//     .block
+//         display: flex
+//         align-items: stretch
+//         justify-content: center
+//         flex: 1
+//
+//         .name
+//             display: flex
+//             align-items: center
+//             flex: 1
+//             background-color: $grey2
+//             padding: 0 1rem
+//
+//         .value
+//             display: flex
+//             align-items: center
+//             justify-content: center
+//             background: $grey1
+//             padding: 0 1rem
+//             min-width: $button * 2
+//
+//     .block
+//         display: flex
+//         font-size: 16px
+//         a
+//             display: flex
+//             align-items: center
+//             justify-content: center
+//             font-weight: bold
+//             width: $button
+//             height: $button
+//
+//             &.up
+//                 background: $blue5
+//                 color: $blue0
+//
+//             &.dn
+//                 background: $bluegrey2
+//                 color: $bluegrey0
+//
+// // *
+// //     background: rgba(0, 0, 0, 0.1) !important
